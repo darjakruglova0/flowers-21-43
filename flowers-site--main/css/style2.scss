@@ -1,0 +1,90 @@
+@import "style-general.scss";
+
+
+/*меню*/
+.header{
+  &__soc{
+display: flex;
+gap: 0.5em;
+  }
+  &__card{
+   font-size: 12px;
+   display: flex;
+   align-items: center;
+   &-item{
+    display: flex;
+   align-items: center;
+
+   .total_count{
+margin-left: 4px;
+   }
+    &:first-child {
+      margin-right: 40px;
+    }
+    svg{
+      margin-right: 11px;
+    }
+  }
+  }
+  &__bottom{
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+&__menu{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-size: calc(12px + 3 * (100vw - 400px) / 1920);
+  &-item{
+    padding: 0 13px 0 13px;
+  
+}
+
+  }
+}
+ 
+
+
+
+
+
+.dropdown{
+&:hover{
+
+
+}
+  &__item{ 
+    color: $text-color_black;
+    background: #D9D9D9;
+    padding: 6px 11px;
+    border: 0.1px solid $main-color;
+    &:hover{
+      background:$gradient-color;
+      color:#fff;
+
+    }
+    &:active{
+      background:$gradient-color;
+      color:#fff
+    }
+
+  }
+&-content{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  display: none;
+  margin-top: 10px;
+  border-radius: 0px 0px 2px 2px;
+
+}
+}
+
+
+.dropdown ul li:hover .dropdown-content {
+  display: block;
+}
